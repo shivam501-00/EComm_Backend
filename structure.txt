@@ -1,0 +1,30 @@
+ecommerce-backend/
+│── src/main/java/com/example/ecommerce/
+│   ├── config/              # Configuration files
+│   │   ├── SecurityConfig.java
+│   │   ├── CorsConfig.java
+│   │   ├── PaymentConfig.java
+│   ├── controller/          # REST Controllers
+│   │   ├── AuthController.java
+│   │   ├── ProductController.java
+│   │   ├── OrderController.java
+│   ├── service/             # Business Logic
+│   │   ├── AuthService.java
+│   │   ├── ProductService.java
+│   │   ├── OrderService.java
+│   ├── repository/          # Data Layer (Spring Data JPA)
+│   │   ├── UserRepository.java
+│   │   ├── ProductRepository.java
+│   │   ├── OrderRepository.java
+│   ├── model/               # Entities
+│   │   ├── User.java
+│   │   ├── Product.java
+│   │   ├── Order.java
+│   ├── dto/                 # Data Transfer Objects (DTOs)
+│   │   ├── LoginRequest.java
+│   │   ├── SignupRequest.java
+│   │   ├── ProductDTO.java
+│   │   ├── OrderDTO.java
+│   ├── EcommerceApplication.java  # Main Class
+│
+├── pom.xml                  # Maven dependencies
