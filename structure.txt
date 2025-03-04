@@ -12,11 +12,11 @@ ecommerce-backend/
 │   │   ├── AuthService.java
 │   │   ├── ProductService.java
 │   │   ├── OrderService.java
-│   ├── repository/          # Data Layer (Spring Data JPA)
+│   ├── repository/          # Data Layer (Spring Data JPA) Done
 │   │   ├── UserRepository.java
 │   │   ├── ProductRepository.java
 │   │   ├── OrderRepository.java
-│   ├── model/               # Entities
+│   ├── model/               # Entities Done
 │   │   ├── User.java
 │   │   ├── Product.java
 │   │   ├── Order.java
@@ -28,3 +28,8 @@ ecommerce-backend/
 │   ├── EcommerceApplication.java  # Main Class
 │
 ├── pom.xml                  # Maven dependencies
+
+
+SPRING_DATASOURCE_USERNAME=ecom_user;SPRING_DATASOURCE_PASSWORD=Ecom@123
+
+
