@@ -29,7 +29,7 @@ ecommerce-backend/
 │
 ├── pom.xml                  # Maven dependencies
 
-
 SPRING_DATASOURCE_USERNAME=ecom_user;SPRING_DATASOURCE_PASSWORD=Ecom@123
+
 
 

@@ -20,14 +20,25 @@ import java.io.IOException;
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-
-    private final JwtService jwtService ;
+@Autowired
+    private  JwtService jwtService ;
 
     private final CustomUserDetailsService userDetailsService;
+
+    public JwtAuthenticationFilter(CustomUserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+
+        // Skip JWT authentication for registration and login endpoints
+        String path = request.getServletPath();
+        if (path.equals("/api/auth/signup") || path.equals("/api/auth/login")) {
+            filterChain.doFilter(request, response);
+            return;
+        }
 
         // 🔹 1️⃣ Extract JWT from Header
         String authHeader = request.getHeader("Authorization");
